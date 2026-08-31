@@ -16,6 +16,7 @@
 
     <main class="container">
       
+        <!-- Bloco Principal da Agenda -->
         <section class="card">
             <h2>Novo Compromisso</h2>
             <div class="form-group">
@@ -24,13 +25,120 @@
             </div>
         </section>
 
-        
         <section class="card">
             <h2>Meus Compromissos</h2>
             <ul id="listaTarefas">
-            
                 <li class="tarefa-item">Exemplo de compromisso número 1 <button class="btn-deletar" onclick="this.parentElement.remove()">✕</button></li>
             </ul>
+        </section>
+
+        <hr style="border: 0; height: 1px; background: #cbd5e1; margin: 30px 0;">
+
+        <!-- Seção dos Exercícios Integrados -->
+        <h2 style="text-align: center; margin-bottom: 20px; color: #1e3a8a; font-size: 1.4rem;">✏️ Exercícios Realizados</h2>
+
+        <!-- Exercício 1 -->
+        <section class="card">
+            <h2>1. Dispositivos Móveis 2</h2>
+            <div class="form-group">
+                <button onclick="mostrarDisciplina()">Mostrar Disciplina</button>
+            </div>
+            <div class="tarefa-item" id="resEx1">Resultado: -</div>
+        </section>
+
+        <!-- Exercício 2 -->
+        <section class="card">
+            <h2>2. Somador de Ponto Flutuante</h2>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                <input type="number" step="any" id="ex2Num1" placeholder="Número 1 (ex: 5.5)">
+                <input type="number" step="any" id="ex2Num2" placeholder="Número 2 (ex: 4.2)">
+                <button onclick="somarFlutuantes()">Calcular Soma</button>
+            </div>
+            <div class="tarefa-item" id="resEx2" style="margin-top: 10px;">Resultado: -</div>
+        </section>
+
+        <!-- Exercício 3 -->
+        <section class="card">
+            <h2>3. Média Aritmética e Status</h2>
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                <input type="number" id="nota1" placeholder="Nota 1" min="0" max="10">
+                <input type="number" id="nota2" placeholder="Nota 2" min="0" max="10">
+                <input type="number" id="nota3" placeholder="Nota 3" min="0" max="10">
+                <input type="number" id="nota4" placeholder="Nota 4" min="0" max="10">
+            </div>
+            <button onclick="calcularMedia()" style="width: 100%; margin-top: 8px;">Calcular Média</button>
+            <div class="tarefa-item" id="resEx3" style="margin-top: 10px;">Resultado: -</div>
+        </section>
+
+        <!-- Exercício 5 -->
+        <section class="card">
+            <h2>5. Tabuada (0 a 10)</h2>
+            <div class="form-group">
+                <input type="number" id="numTabuada" placeholder="Digite um inteiro">
+                <button onclick="gerarTabuada()">Gerar</button>
+            </div>
+            <div class="tarefa-item" id="resEx5" style="white-space: pre-line; display: none;"></div>
+        </section>
+
+        <!-- Exercício 6 -->
+        <section class="card">
+            <h2>6. Maior de 3 Valores Positivos</h2>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px;">Insira 3 valores positivos e depois -1 para processar.</p>
+            <div class="form-group">
+                <input type="number" id="inputMaior" placeholder="Digite o valor">
+                <button onclick="adicionarValorMaior()">Inserir</button>
+            </div>
+            <div class="tarefa-item" id="resEx6">Histórico: Nenhum valor inserido</div>
+        </section>
+
+        <!-- Exercício 7 -->
+        <section class="card">
+            <h2>7. Filtrar Vetor Ímpares</h2>
+            <div class="form-group">
+                <button onclick="imprimirImpares()">Processar Vetor [1..10]</button>
+            </div>
+            <div class="tarefa-item" id="resEx7">Resultado: -</div>
+        </section>
+
+        <!-- Exercício 8 -->
+        <section class="card">
+            <h2>8. Nome de Trás para Frente</h2>
+            <div class="form-group">
+                <input type="text" id="inputNomeInvertido" placeholder="Digite seu nome">
+                <button onclick="inverterNome()">Inverter</button>
+            </div>
+            <div class="tarefa-item" id="resEx8">Resultado: -</div>
+        </section>
+
+        <!-- Exercício 9 -->
+        <section class="card">
+            <h2>9. Cadastro de Funcionários</h2>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 8px;">Cadastre ao menos 5 funcionários (Salário Mínimo: R$ 1412.00).</p>
+            <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                <input type="text" id="funcNome" placeholder="Nome">
+                <input type="number" id="funcIdade" placeholder="Idade">
+                <input type="text" id="funcSexo" placeholder="Sexo (M/F)">
+                <input type="number" id="funcSalario" placeholder="Salário (R$)">
+                <button onclick="cadastrarFuncionario()">Salvar Funcionário</button>
+            </div>
+            <div class="tarefa-item" id="contagemFunc" style="margin-top: 8px;">Cadastrados: 0 / 5</div>
+            <div class="tarefa-item" id="resEx9" style="white-space: pre-line; display: none; margin-top: 8px; background: #e2e8f0;"></div>
+        </section>
+
+        <!-- Exercício 10 -->
+        <section class="card">
+            <h2>10. Calculadora Dinâmica (Funções)</h2>
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                <input type="number" id="calcN1" placeholder="Valor A">
+                <input type="number" id="calcN2" placeholder="Valor B">
+            </div>
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 8px;">
+                <button onclick="executarCalculo('soma')">Adição</button>
+                <button onclick="executarCalculo('sub')">Subtração</button>
+                <button onclick="executarCalculo('mult')">Multiplicação</button>
+                <button onclick="executarCalculo('div')">Divisão</button>
+            </div>
+            <div class="tarefa-item" id="resEx10" style="margin-top: 10px;">Resultado: -</div>
         </section>
     </main>
 </body>
