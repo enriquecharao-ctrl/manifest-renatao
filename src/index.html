@@ -5,10 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="style.css">
-    <script href="app.js"></script>
+    <script src="app.js" defer></script>
     <title>Minha Agenda</title>
 </head>
 <body>
-    <h1>minha agenda</h1>
+    <header>
+        <h1> Minha Agenda</h1>
+        <p>Organize suas tarefas e compromissos</p>
+    </header>
+
+    <main class="container">
+      
+        <section class="card">
+            <h2>Novo Compromisso</h2>
+            <div class="form-group">
+                <input type="text" id="novaTarefa" placeholder="O que você precisa fazer?">
+                <button onclick="adicionarTarefa()">Adicionar</button>
+            </div>
+        </section>
+
+        
+        <section class="card">
+            <h2>Meus Compromissos</h2>
+            <ul id="listaTarefas">
+            
+                <li class="tarefa-item">Exemplo de compromisso número 1 <button class="btn-deletar" onclick="this.parentElement.remove()">✕</button></li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>

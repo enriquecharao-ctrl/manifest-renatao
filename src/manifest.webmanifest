@@ -3,6 +3,7 @@
     "short_name": "Agenda",
     "start_url": "/",
     "display": "standalone",
+    "orientation": "portrait-primary",
     "icons": [
         {
             "src": "icons/icon-192.png",
