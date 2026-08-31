@@ -21,7 +21,7 @@ function adicionarTarefa() {
 
 // 1. Mostrar Nome da Disciplina
 function mostrarDisciplina() {
-    document.getElementById('resEx1').innerText = "Disciplina: Programação de Aplicações Web (PWA)";
+    document.getElementById('resEx1').innerText = "Disciplina: Dispositivos Móveis 2";
 }
 
 // 2. Soma de Ponto Flutuante
